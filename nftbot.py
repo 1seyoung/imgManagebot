@@ -76,7 +76,7 @@ class NFTmanager():
         b=context.user_data['owner']
         print("get")
         print(update.message.photo)
-        file_path = os.path.join(dir_now, f'file_/{a}_from_{b}.png')
+        file_path = os.path.join(dir_now, f'.file_/{a}_from_{b}.png')
         photo_id = update.message.photo[-1].file_id  # photo 번호가 높을수록 화질이 좋음
         photo_file = context.bot.getFile(photo_id)
         photo_file.download(file_path)
